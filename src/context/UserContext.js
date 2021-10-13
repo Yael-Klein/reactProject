@@ -3,25 +3,14 @@ import AppContext from ".";
 
 const  UserContext=({ children })=>{
 
-    const [state, setState] = useState({ user: {
-        studentId: 2,
-        studentTz :"2345",
-        studentFirstName:"לאה",
-        studentLastName:"לוי",
-        studentPel: "032586515",
-        studentCity:"בני ברק",
-        studentAddress:"ירושלים 8",
-        studentParentName:"חנה",
-        studentParentPel:"0527648785",
-        studentParentEmail:"c@gmail.com"
-    } });
+    const [state, setState] = useState({currentPhoto:null });
 
-    const updateUser = (user) => {
-        setState((prevState) => ({ user }))
+    const updateCurrentPhoto= (photo) => {
+        setState((prevState) => ({ photo }))
     }
 
     return (<AppContext.Provider
-        value={{ user: state.user, updateUser: updateUser }}>
+        value={{ photo: state.photo,updateCurrentPhoto}}>
         {children}
     </AppContext.Provider>)
 }
