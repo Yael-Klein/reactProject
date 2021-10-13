@@ -9,7 +9,7 @@ const Photo = ({photo})=>{
    context.updateCurrentPhoto(photo)
    history.push('/flicker_image')
 }
-    return <div style={{ height: 400, width: '85%', marginLeft: 50, marginTop: 70,float:'right'}}>
+    return <div style={{ height: 400, width: '85%', marginLeft: 50, marginTop: 70,float:'left'}}>
         <p>ID: {photo.id}</p>
         <p>owner:{photo.owner}</p>
         <p>secret:{photo.secret}</p>
